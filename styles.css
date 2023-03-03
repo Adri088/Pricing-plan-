@@ -1,0 +1,141 @@
+/*General styles*/
+* {
+    font-family: 'Red Hat Display', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(225, 100%, 94%);
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    margin: 24px;
+}
+
+
+/*Classes*/
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 15px 25px -2px hsl(224, 23%, 55%, 0.3);
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+}
+
+
+.plan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: #F5F7FFFF;
+    width: 100%;
+    border-radius: 16px;
+    gap: 24px;
+}
+
+.plan .description {
+    display: flex;
+    flex-direction: row;
+    color: hsl(223, 47%, 23%);
+    gap: 24px;
+    align-items: center;
+}
+
+.plan .description img {
+    max-width: 48px;
+}
+
+.change {
+    font-weight: 700;
+    color: hsl(245, 75%, 52%);
+}
+
+.change:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: hsl(245, 75%, 52%, 0.5);
+}
+
+
+.proceed {
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px -2px hsl(245, 75%, 52%, 0.45);
+    border: none;
+    background: hsl(245, 75%, 52%);
+    color: white;
+}
+
+.proceed:hover {
+    cursor: pointer;
+    background: hsl(245, 75%, 52%, 0.8);
+}
+
+.cancel {
+    all: unset;
+    margin: 30px 0px 50px 0px;
+    color: hsl(223, 47%, 23%, 0.7);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cancel:hover {
+    cursor: pointer;
+    color: hsl(223, 47%, 23%);
+}
+
+/*Mobile design*/
+
+@media screen and (max-width: 475px) {
+    body {
+        background: hsl(225, 100%, 94%);
+    }
+
+
+    main {
+        width: 100%;
+    }
+
+    .picture {
+        width: 100%;
+    }
+
+    .plan {
+        justify-content: space-around;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .plan .description {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+}
